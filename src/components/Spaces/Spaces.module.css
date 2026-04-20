@@ -1,0 +1,112 @@
+.spaces {
+  padding: var(--spacing-xxl) 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+  align-items: center;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.title {
+  font-size: 2.5rem;
+  color: var(--color-kinshi);
+  letter-spacing: 0.2em;
+  margin-bottom: var(--spacing-sm);
+  display: inline-block;
+  position: relative;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 30px;
+  background-color: var(--color-kinshi);
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  letter-spacing: 0.3em;
+  color: var(--color-nibiiro);
+  margin-top: 40px;
+}
+
+.content {
+  display: flex;
+  gap: 0; /* くっつける */
+  align-items: stretch;
+  width: 100%;
+}
+
+.textWrapper {
+  flex: 1;
+}
+
+.spacesPanel {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-lg) var(--spacing-xl);
+  border-right: none; /* 画像側とくっつく部分 */
+}
+
+.roomType {
+  border-bottom: 1px solid rgba(255, 255, 251, 0.1);
+  padding-bottom: var(--spacing-md);
+}
+
+.roomName {
+  font-size: 1.4rem;
+  color: var(--color-gofun);
+  letter-spacing: 0.2em;
+  margin-bottom: var(--spacing-xs);
+}
+
+.roomDesc {
+  font-size: 0.95rem;
+  color: var(--color-nibiiro);
+  line-height: 1.8;
+  letter-spacing: 0.1em;
+}
+
+.imageGrid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0; /* くっついているグリッド */
+  min-height: 600px;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 992px) {
+  .content {
+    flex-direction: column;
+  }
+  
+  .imageGrid {
+    min-height: 400px;
+  }
+
+  .spacesPanel {
+    padding: var(--spacing-md);
+    border-right: 1px solid var(--panel-border);
+  }
+}

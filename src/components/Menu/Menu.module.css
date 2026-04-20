@@ -1,0 +1,116 @@
+.menu {
+  padding: var(--spacing-xxl) 0;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.title {
+  font-size: 2.5rem;
+  color: var(--color-kinshi);
+  letter-spacing: 0.2em;
+  margin-bottom: var(--spacing-sm);
+  display: inline-block;
+  position: relative;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 30px;
+  background-color: var(--color-kinshi);
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  letter-spacing: 0.3em;
+  color: var(--color-nibiiro);
+  margin-top: 40px;
+}
+
+.courseList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.coursePanel {
+  padding: var(--spacing-md) var(--spacing-lg);
+  transition: transform 0.4s ease, border-color 0.4s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.coursePanel:hover {
+  transform: translateX(10px);
+  border-color: var(--color-kinshi);
+}
+
+.courseInfo {
+  flex: 1;
+}
+
+.courseName {
+  font-size: 1.6rem;
+  color: var(--color-gofun);
+  letter-spacing: 0.25em;
+  margin-bottom: var(--spacing-xs);
+}
+
+.courseDesc {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--color-nibiiro);
+  letter-spacing: 0.1em;
+  line-height: 1.8;
+}
+
+.coursePrice {
+  font-size: 1.4rem;
+  color: var(--color-kinshi);
+  letter-spacing: 0.1em;
+  padding-left: var(--spacing-md);
+  border-left: 1px solid rgba(203, 170, 92, 0.2);
+  margin-left: var(--spacing-md);
+  white-space: nowrap;
+}
+
+.notePanel {
+  max-width: 800px;
+  margin: var(--spacing-xl) auto 0;
+  text-align: center;
+  padding: var(--spacing-md);
+  border: 1px solid rgba(255, 255, 251, 0.1);
+}
+
+.notePanel p {
+  font-size: 0.9rem;
+  color: var(--color-gofun); /* Changed to pure text color for readability */
+  letter-spacing: 0.1em;
+  line-height: 2.2;
+}
+
+@media (max-width: 768px) {
+  .coursePanel {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+  }
+  
+  .coursePrice {
+    border-left: none;
+    padding-left: 0;
+    margin-left: 0;
+    align-self: flex-end;
+  }
+}

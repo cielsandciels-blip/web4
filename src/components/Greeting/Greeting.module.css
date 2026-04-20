@@ -1,0 +1,71 @@
+.greeting {
+  padding: var(--spacing-xxl) 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.greetingPanel {
+  max-width: 900px;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.textWrapper {
+  display: flex;
+  justify-content: center;
+  height: auto;
+  min-height: 500px;
+  padding: var(--spacing-lg);
+}
+
+.message {
+  font-size: 1.1rem;
+  line-height: 2.8;
+  letter-spacing: 0.25em;
+  color: var(--color-gofun);
+}
+
+.message p {
+  margin-left: 2.5rem;
+}
+
+.signature {
+  margin-right: 3rem;
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.chefRole {
+  font-size: 0.9rem;
+  letter-spacing: 0.3em;
+  color: var(--color-nibiiro);
+}
+
+.chefName {
+  font-size: 1.5rem;
+  letter-spacing: 0.4em;
+  color: var(--color-kinshi);
+}
+
+@media (max-width: 768px) {
+  .textWrapper {
+    min-height: 400px;
+    padding: var(--spacing-md);
+  }
+  
+  .message {
+    font-size: 1rem;
+    line-height: 2.4;
+  }
+  
+  .message p {
+    margin-left: 1.5rem;
+  }
+}

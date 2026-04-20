@@ -1,0 +1,91 @@
+.reservation {
+  padding: var(--spacing-xxl) 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.reservationPanel {
+  padding: var(--spacing-xl) var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 2.2rem;
+  letter-spacing: 0.2em;
+  color: var(--color-kinshi);
+  margin-bottom: var(--spacing-xl);
+  font-weight: 300;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-md);
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: var(--spacing-xl);
+}
+
+.item {
+  display: flex;
+  border-bottom: 1px solid rgba(255, 255, 251, 0.1);
+  padding-bottom: var(--spacing-sm);
+}
+
+.label {
+  color: var(--color-nibiiro);
+  width: 150px;
+  flex-shrink: 0;
+  letter-spacing: 0.15em;
+}
+
+.value {
+  color: var(--color-gofun);
+  letter-spacing: 0.1em;
+  line-height: 1.8;
+}
+
+.buttonContainer {
+  margin-top: var(--spacing-lg);
+}
+
+.bookButton {
+  display: inline-block;
+  padding: 1.2rem 5rem;
+  border: 1px solid var(--color-kinshi);
+  color: var(--color-kinshi);
+  font-size: 1.1rem;
+  letter-spacing: 0.2em;
+  transition: all 0.4s ease;
+  background: transparent;
+}
+
+.bookButton:hover {
+  background-color: var(--color-kinshi);
+  color: var(--color-shikkoku);
+}
+
+@media (max-width: 768px) {
+  .reservationPanel {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+  
+  .item {
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .label {
+    width: auto;
+    color: var(--color-kinshi);
+    font-size: 0.9rem;
+  }
+}

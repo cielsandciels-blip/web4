@@ -1,0 +1,21 @@
+.footer {
+  padding: var(--spacing-lg) 0;
+  border-top: 1px solid rgba(255, 255, 251, 0.05);
+  background-color: var(--color-shikkoku);
+  text-align: center;
+}
+
+.logo {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  letter-spacing: 0.2em;
+  color: var(--color-gofun);
+  margin-bottom: var(--spacing-md);
+  font-weight: 300;
+}
+
+.copyright {
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  color: var(--color-nibiiro);
+}
