@@ -12,6 +12,42 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  
+  /* ゴージャスな装飾の上書き */
+  background: linear-gradient(135deg, rgba(15, 15, 15, 0.95) 0%, rgba(35, 30, 20, 0.85) 100%);
+  border: 1px solid rgba(203, 170, 92, 0.6);
+  outline: 1px solid rgba(203, 170, 92, 0.2);
+  outline-offset: -10px;
+  box-shadow: 
+    0 15px 50px rgba(0, 0, 0, 0.6),
+    inset 0 0 80px rgba(203, 170, 92, 0.08);
+}
+
+/* コーナーの装飾（四隅のアクセント） */
+.greetingPanel::before,
+.greetingPanel::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--color-kinshi);
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.greetingPanel::before {
+  top: 6px;
+  left: 6px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.greetingPanel::after {
+  bottom: 6px;
+  right: 6px;
+  border-left: none;
+  border-top: none;
 }
 
 .textWrapper {
