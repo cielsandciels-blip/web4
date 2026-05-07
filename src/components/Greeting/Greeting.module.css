@@ -55,26 +55,31 @@
 }
 
 @media (max-width: 768px) {
+  .greetingPanel {
+    width: 95%;
+    padding: var(--spacing-lg) var(--spacing-sm); /* パネル内の左右の余白を減らして文字のスペースを広げる */
+  }
+
   .textWrapper {
-    min-height: 550px; /* 高さを確保して横幅の広がりを防ぐ */
-    padding: var(--spacing-md);
+    height: 650px; /* min-heightではなくheightで高さを固定し、行数を減らして横の広がりを抑える */
+    padding: 0;
   }
   
   .message {
-    font-size: 0.95rem;
-    line-height: 2.2;
+    font-size: 0.9rem; /* もう少しだけ小さく */
+    line-height: 2; /* 行間を少し詰める */
   }
   
   .message p {
-    margin-left: 1.2rem;
+    margin-left: 1rem;
   }
 
   .signature {
-    margin-right: 1.5rem;
-    margin-top: 2rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
   }
 
   .chefName {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
   }
 }
