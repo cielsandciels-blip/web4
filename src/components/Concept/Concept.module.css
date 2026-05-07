@@ -71,14 +71,29 @@
 
   .textWrapper {
     width: 100%;
+    min-height: 500px; /* 縦書きの高さを確保し行数を減らす */
+  }
+  
+  .conceptPanel {
+    padding: var(--spacing-md); /* モバイル時はパディングを小さくしてスペースを確保 */
   }
 
   .imageWrapper {
     width: 100%;
-    min-height: 400px;
+    min-height: 350px;
   }
 
   .title {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
+    margin-left: 1.5rem;
+  }
+
+  .description {
+    font-size: 0.95rem;
+    line-height: 2.2;
+  }
+
+  .description p {
+    margin-left: 1.5rem;
   }
 }
